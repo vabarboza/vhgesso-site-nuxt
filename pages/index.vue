@@ -13,7 +13,7 @@
 
     <div class="container">
 
-      <div class="columns is-desktop">
+      <div class="columns">
         <div class="column">
 
           <div class="card">
