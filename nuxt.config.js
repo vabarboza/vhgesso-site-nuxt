@@ -3,7 +3,8 @@ export default {
   head: {
     title: 'vhgesso-site-nuxt',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-BR',
+      class: "theme-light"
     },
     meta: [
       { charset: 'utf-8' },
@@ -11,7 +12,21 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        type: "text/css",
+        href: 'https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        type: "text/css",
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+      }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
