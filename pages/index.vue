@@ -11,6 +11,24 @@
       </section>
     </div>
 
+    <div class="container">
+
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            <img src="~/assets/images/inicio/01.jpg" alt="Forro Liso">
+          </figure>
+        </div>
+        <div class="card-content">
+          <h2 class="title is-4">Forro Liso</h2>
+          <p class="is-size-7">É a tendência do momento usado para revestir paredes e teto pela sua versatilidade,
+            plasticidade e
+            acabamento. Ele traz um toque sutil e fino, paredes com bom acabamento de Gesso Liso e uma boa tinta é
+            notória sua diferença e classe.</p>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </template>
