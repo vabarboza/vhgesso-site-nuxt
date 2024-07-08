@@ -132,11 +132,3 @@ export default {
   name: 'IndexPage',
 }
 </script>
-
-<style>
-.bordered {
-  border: 1px;
-  border-style: solid;
-  border-radius: 5px;
-}
-</style>
