@@ -29,7 +29,7 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a class="navbar-item" href="/produtos/forroliso">
               Forro Liso
             </a>
             <a class="navbar-item">

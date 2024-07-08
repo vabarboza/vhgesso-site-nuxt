@@ -18,9 +18,11 @@
           <div class="cell">
             <div class="card">
               <div class="card-image">
-                <figure class="image">
-                  <img src="~/assets/images/inicio/01.jpg" alt="Forro Liso">
-                </figure>
+                <a href="/produtos/forroliso">
+                  <figure class="image">
+                    <img src="~/assets/images/inicio/01.jpg" alt="Forro Liso">
+                  </figure>
+                </a>
               </div>
               <div class="card-content">
                 <h2 class="title is-4">Forro Liso</h2>
@@ -71,53 +73,59 @@
 
           <div class="cell">
             <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="~/assets/images/inicio/04.jpg" alt="Forro Liso">
-              </figure>
+              <div class="card-image">
+                <figure class="image">
+                  <img src="~/assets/images/inicio/04.jpg" alt="Forro Liso">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2 class="title is-5">Sancas</h2>
+                <p class="is-size-7">Sanca ou rebaixamento de teto realmente fazem a diferença nos mais diferentes
+                  ambientes trazendo
+                  estilo, requinte e beleza. A VH Gesso tem sempre o melhor projeto de sanca e iluminação com as
+                  melhores
+                  soluções. Sempre atendendo o Perfil e necessidade de nossos Clientes com projetos únicos e exclusivos.
+                </p>
+              </div>
             </div>
-            <div class="card-content">
-              <h2 class="title is-5">Sancas</h2>
-              <p class="is-size-7">Sanca ou rebaixamento de teto realmente fazem a diferença nos mais diferentes ambientes trazendo
-                estilo, requinte e beleza. A VH Gesso tem sempre o melhor projeto de sanca e iluminação com as melhores
-                soluções. Sempre atendendo o Perfil e necessidade de nossos Clientes com projetos únicos e exclusivos.
-              </p>
-            </div>
-          </div>
           </div>
 
           <div class="cell">
             <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="~/assets/images/inicio/05.jpg" alt="Forro Liso">
-              </figure>
+              <div class="card-image">
+                <figure class="image">
+                  <img src="~/assets/images/inicio/05.jpg" alt="Forro Liso">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2 class="title is-5">Colunas Decorativas</h2>
+                <p class="is-size-7">As colunas são utilizadas na decoração do ambiente e são, também, muito utilizadas
+                  para a limitação
+                  (divisão) do ambiente. Elas podem ser lisas ou caneladas "tipo grego". Tanto a coluna lisa como a
+                  coluna
+                  decorada têm acompanhamento da base, para acabamento no pé da coluna, e do capitel, para
+                  acompanhamento
+                  em cima da coluna. As Colunas em gesso são muito úteis na decoração externa.</p>
+              </div>
             </div>
-            <div class="card-content">
-              <h2 class="title is-5">Colunas Decorativas</h2>
-              <p class="is-size-7">As colunas são utilizadas na decoração do ambiente e são, também, muito utilizadas para a limitação
-                (divisão) do ambiente. Elas podem ser lisas ou caneladas "tipo grego". Tanto a coluna lisa como a coluna
-                decorada têm acompanhamento da base, para acabamento no pé da coluna, e do capitel, para acompanhamento
-                em cima da coluna. As Colunas em gesso são muito úteis na decoração externa.</p>
-            </div>
-          </div>
           </div>
 
           <div class="cell">
             <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="~/assets/images/inicio/06.jpg" alt="Forro Liso">
-              </figure>
+              <div class="card-image">
+                <figure class="image">
+                  <img src="~/assets/images/inicio/06.jpg" alt="Forro Liso">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2 class="title is-5">Gesso Decorado</h2>
+                <p class="is-size-7">Esse revestimento é feito através de placas de gesso com desenhos em auto relevo em
+                  uma das faces, que
+                  cria um efeito sensacional e maravilhoso de luz e sombra nas paredes que são aplicados. As texturas e
+                  composições que esse revestimento agrega no ambiente valoriza e aumenta muito a sensação de requinte e
+                  conforto do espaço.</p>
+              </div>
             </div>
-            <div class="card-content">
-              <h2 class="title is-5">Gesso Decorado</h2>
-              <p class="is-size-7">Esse revestimento é feito através de placas de gesso com desenhos em auto relevo em uma das faces, que
-                cria um efeito sensacional e maravilhoso de luz e sombra nas paredes que são aplicados. As texturas e
-                composições que esse revestimento agrega no ambiente valoriza e aumenta muito a sensação de requinte e
-                conforto do espaço.</p>
-            </div>
-          </div>
           </div>
         </div>
 
