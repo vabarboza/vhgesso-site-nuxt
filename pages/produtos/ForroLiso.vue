@@ -9,7 +9,7 @@
         <div class="container">
           <div class="columns is-mobile is-centered">
             <div class="column is-narrow is-centered">
-              <figure class="image">
+              <figure class="image cursor-pointer hover-grow" @click="openModal(require('~/assets/images/produtos/forroliso/01.jpeg'))">
                 <img src="~/assets/images/produtos/forroliso/01.jpeg" style="width: 350px;" />
               </figure>
             </div>
@@ -25,81 +25,27 @@
       </section>
     </div>
 
-    <div class="container pl-5 pr-5">
-
+    <div class="container pl-5 pr-5 pb-6">
       <div class="fixed-grid has-4-cols has-1-cols-mobile">
         <div class="grid">
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img id="modal-trigger" src="~/assets/images/produtos/forroliso/01.jpeg" />
+          <div class="cell" v-for="(img, idx) in imagensForro" :key="idx">
+            <figure class="image cursor-pointer hover-grow" @click="openModal(img.src)">
+              <img :src="img.src" :style="img.style" />
             </figure>
           </div>
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/02.jpeg" />
-            </figure>
-          </div>
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/03.jpeg" />
-            </figure>
-          </div>
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/04.jpeg" />
-            </figure>
-          </div>
-
         </div>
       </div>
-
-      <div class="fixed-grid has-4-cols has-1-cols-mobile">
-        <div class="grid">
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/05.jpeg" style="width: 350px;" />
-            </figure>
-          </div>
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/06.jpeg" style="width: 350px;" />
-            </figure>
-          </div>
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/07.jpeg" style="width: 350px;" />
-            </figure>
-          </div>
-
-          <div class="cell">
-            <figure class="image js-modal-trigger" data-target="modal-js-example">
-              <img src="~/assets/images/produtos/forroliso/08.jpeg" style="width: 350px;" />
-            </figure>
-          </div>
-
-        </div>
-      </div>
-
     </div>
 
     <!-- Modal -->
-    <div id="modal-js-example" class="modal">
-      <div class="modal-background"></div>
-
+    <div class="modal" :class="{'is-active': isModalOpen}">
+      <div class="modal-background" @click="closeModal"></div>
       <div class="modal-content has-text-centered">
-        <figure class="image">
-          <img id="modal-image" src="" />
-        </figure>
+        <p class="image">
+          <img :src="currentModalImage" style="max-height: 85vh; width: auto; object-fit: contain; margin: 0 auto; display: block;" />
+        </p>
       </div>
-
-      <button class="modal-close is-large" aria-label="close"></button>
+      <button class="modal-close is-large" aria-label="close" @click="closeModal"></button>
     </div>
 
   </div>
@@ -107,55 +53,54 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isModalOpen: false,
+      currentModalImage: '',
+      imagensForro: [
+        { src: require('~/assets/images/produtos/forroliso/01.jpeg'), style: '' },
+        { src: require('~/assets/images/produtos/forroliso/02.jpeg'), style: '' },
+        { src: require('~/assets/images/produtos/forroliso/03.jpeg'), style: '' },
+        { src: require('~/assets/images/produtos/forroliso/04.jpeg'), style: '' },
+        { src: require('~/assets/images/produtos/forroliso/05.jpeg'), style: 'width: 350px;' },
+        { src: require('~/assets/images/produtos/forroliso/06.jpeg'), style: 'width: 350px;' },
+        { src: require('~/assets/images/produtos/forroliso/07.jpeg'), style: 'width: 350px;' },
+        { src: require('~/assets/images/produtos/forroliso/08.jpeg'), style: 'width: 350px;' }
+      ]
+    }
+  },
   mounted() {
-    document.addEventListener('DOMContentLoaded', () => {
-      // Functions to open and close a modal
-      function openModal($el, imageSrc) {
-        const modalImage = $el.querySelector('#modal-image');
-        modalImage.src = imageSrc;
-        $el.classList.add('is-active');
+    document.addEventListener('keydown', this.handleKeydown)
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.handleKeydown)
+  },
+  methods: {
+    openModal(imageSrc) {
+      this.currentModalImage = imageSrc
+      this.isModalOpen = true
+    },
+    closeModal() {
+      this.isModalOpen = false
+      this.currentModalImage = ''
+    },
+    handleKeydown(e) {
+      if (e.key === 'Escape' && this.isModalOpen) {
+        this.closeModal()
       }
-
-      function closeModal($el) {
-        $el.classList.remove('is-active');
-      }
-
-      function closeAllModals() {
-        (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-          closeModal($modal);
-        });
-      }
-
-      // Add a click event on figures to open a specific modal with the clicked image
-      (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-        const modalId = $trigger.dataset.target;
-        const $target = document.getElementById(modalId);
-
-        $trigger.addEventListener('click', () => {
-          const img = $trigger.querySelector('img');
-          const imageSrc = img.src;
-          openModal($target, imageSrc);
-        });
-      });
-
-      // Add a click event on various child elements to close the parent modal
-      (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-        const $target = $close.closest('.modal');
-
-        $close.addEventListener('click', () => {
-          closeModal($target);
-        });
-      });
-
-      // Add a keyboard event to close all modals
-      document.addEventListener('keydown', (event) => {
-        if (event.key === "Escape") {
-          closeAllModals();
-        }
-      });
-    });
+    }
   }
 }
 </script>
 
-<style></style>
+<style scoped>
+.cursor-pointer {
+  cursor: pointer;
+}
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+.hover-grow:hover {
+  transform: scale(1.03);
+}
+</style>
