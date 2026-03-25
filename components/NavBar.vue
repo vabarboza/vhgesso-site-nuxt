@@ -1,11 +1,11 @@
 <template>
   <nav class="navbar container" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
+      <NuxtLink class="navbar-item" to="/">
         <img class="animate__animated animate__pulse" src="~/assets/images/logo.png" />
-      </a>
+      </NuxtLink>
 
-      <a role="button" class="navbar-burger" data-target="navbarBasicExample" aria-label="menu" aria-expanded="false">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': isMenuActive }" @click="isMenuActive = !isMenuActive">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -13,15 +13,15 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-menu" :class="{ 'is-active': isMenuActive }">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <NuxtLink class="navbar-item" to="/">
           Inicio
-        </a>
+        </NuxtLink>
 
-        <a class="navbar-item">
+        <NuxtLink class="navbar-item" to="/empresa">
           A Empresa
-        </a>
+        </NuxtLink>
 
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
@@ -29,24 +29,24 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="/produtos/forroliso">
+            <NuxtLink class="navbar-item" to="/produtos/forroliso">
               Forro Liso
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/produtos/molduras">
               Molduras
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/produtos/gesso-acartonado">
               Gesso Acartonado
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/produtos/sancas">
               Sancas
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/produtos/colunas-decorativas">
               Colunas Decorativas
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/produtos/gesso-decorado">
               Gesso Decorado
-            </a>
+            </NuxtLink>
           </div>
         </div>
 
@@ -56,38 +56,38 @@
           </a>
 
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <NuxtLink class="navbar-item" to="/parceiros-especiais">
               Parceiros Especiais
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/parceiros">
               Parceiros
-            </a>
-            <a class="navbar-item">
+            </NuxtLink>
+            <NuxtLink class="navbar-item" to="/seja-parceiro">
               Quero ser um parceiro
-            </a>
+            </NuxtLink>
           </div>
         </div>
 
-        <a class="navbar-item" href="/sobre">
+        <NuxtLink class="navbar-item" to="/sobre">
           Contato
-        </a>
+        </NuxtLink>
 
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a href="" class="navbar-item mr-n2">
+            <a href="#" class="navbar-item mr-n2" target="_blank" rel="noopener noreferrer">
               <span class="icon">
                 <i class="fab fa-instagram fa-lg"></i>
               </span>
             </a>
-            <a href="" class="navbar-item mr-n2">
+            <a href="#" class="navbar-item mr-n2" target="_blank" rel="noopener noreferrer">
               <span class="icon">
                 <i class="fab fa-whatsapp fa-lg"></i>
               </span>
             </a>
-            <a href="" class="navbar-item">
+            <a href="#" class="navbar-item" target="_blank" rel="noopener noreferrer">
               <span class="icon">
                 <i class="fab fa-facebook-square fa-lg"></i>
               </span>
@@ -95,8 +95,6 @@
           </div>
         </div>
       </div>
-
-
     </div>
   </nav>
 </template>
@@ -104,29 +102,15 @@
 <script>
 export default {
   name: 'NavBar',
-  mounted() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
+  data() {
+    return {
+      isMenuActive: false
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .mr-n2 {
   margin-right: -10px;
 }

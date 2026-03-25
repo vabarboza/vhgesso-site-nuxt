@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .hero-background {
     background-image: url('~/assets/images/bannerMeio.png');
     background-size: cover;

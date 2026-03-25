@@ -1,7 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'vhgesso-site-nuxt',
+    titleTemplate: '%s - VH Gesso',
+    title: 'Forros, Divisórias e Decorações',
     htmlAttrs: {
       lang: 'pt-BR',
       class: "theme-light"
@@ -9,7 +10,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'VH Gesso - Trabalhando com excelência em forros, molduras, divisórias e gesso acartonado em Sorocaba.' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [

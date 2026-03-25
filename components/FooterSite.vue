@@ -1,13 +1,14 @@
 <template>
-  <footer class="footer mt-5">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
-        The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
-        website content is licensed
-        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      </p>
+  <footer class="footer mt-5 pb-6">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>VH Gesso</strong> &copy; {{ new Date().getFullYear() }}. Todos os direitos reservados.
+        </p>
+        <p class="is-size-7">
+          Trabalhando com excelência em forros, molduras, divisórias e gesso acartonado.
+        </p>
+      </div>
     </div>
   </footer>
 </template>
@@ -18,4 +19,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.footer {
+  background-color: #f5f5f5;
+  padding: 3rem 1.5rem;
+}
+</style>
