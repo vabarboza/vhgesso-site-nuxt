@@ -22,9 +22,16 @@ export default {
 
 <style scoped>
 .hero-background {
-    background-image: url('~/assets/images/bannerMeio.png');
+    background-image: url('~/assets/images/banner_desktop.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .hero-background {
+        background-image: url('~/assets/images/banner_novo.png');
+    }
 }
 
 .responsive-image {
