@@ -4,9 +4,9 @@
             <div class="hero-overlay"></div>
             <div class="hero-body is-flex is-align-items-center is-justify-content-center" style="position: relative; z-index: 2;">
                 <div class="container has-text-centered">
-                    <img class="title responsive-image animate__animated animate__fadeInDown" src="~/assets/images/logo.png" alt="VH Gesso Logo" />
+                    <img class="title responsive-image animate__animated animate__fadeInDown" src="~/assets/images/MainLogo.svg" alt="VH Gesso Logo" />
                     
-                    <h2 class="subtitle has-text-white is-4 has-text-weight-light mt-5 animate__animated animate__fadeInUp animate__delay-1s" style="line-height: 1.6; max-width: 800px; margin: 0 auto;">
+                    <h2 class="subtitle has-text-dark is-4 has-text-weight-light mt-5 animate__animated animate__fadeInUp animate__delay-1s" style="line-height: 1.6; max-width: 800px; margin: 0 auto;">
                         Excelência em <strong style="color: var(--bulma-primary);">Forros</strong>, <strong style="color: var(--bulma-primary);">Molduras</strong> e <strong style="color: var(--bulma-primary);">Gesso Acartonado</strong>. <br class="is-hidden-mobile">
                         Soluções completas para Divisórias, Sancas, Colunas e Arte em Gesso.
                     </h2>
@@ -44,7 +44,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(240, 240, 240, 0.8) 100%);
     z-index: 1;
 }
 
@@ -57,13 +57,13 @@ export default {
 
 .responsive-image {
     height: auto;
-    max-height: 180px;
+    max-height: 250px;
     filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.3));
 }
 
 @media (max-width: 768px) {
     .responsive-image {
-        max-height: 120px;
+        max-height: 160px;
     }
     
     .subtitle {

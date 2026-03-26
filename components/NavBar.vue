@@ -2,7 +2,7 @@
   <nav class="navbar container" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <NuxtLink class="navbar-item" to="/">
-        <img class="animate__animated animate__pulse" src="~/assets/images/logo.png" />
+        <img class="animate__animated animate__pulse logo-svg" src="~/assets/images/logo.svg" />
       </NuxtLink>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': isMenuActive }" @click="isMenuActive = !isMenuActive">
@@ -59,9 +59,6 @@
             <NuxtLink class="navbar-item" to="/parceiros-especiais">
               Parceiros Especiais
             </NuxtLink>
-            <NuxtLink class="navbar-item" to="/parceiros">
-              Parceiros
-            </NuxtLink>
             <NuxtLink class="navbar-item" to="/seja-parceiro">
               Quero ser um parceiro
             </NuxtLink>
@@ -113,5 +110,20 @@ export default {
 <style scoped>
 .mr-n2 {
   margin-right: -10px;
+}
+
+.logo-svg {
+  height: 3.5rem !important;
+  max-height: 3.5rem !important; /* give the new vector logo enough breathing room */
+  width: auto !important;
+  min-width: 210px !important;
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+  }
 }
 </style>
