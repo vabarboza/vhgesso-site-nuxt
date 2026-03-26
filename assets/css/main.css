@@ -1,5 +1,31 @@
+:root {
+  /* Modern Architecture & Plaster Theme for VH Gesso */
+  
+  /* Primary color: Warm Sand/Bronze (#a89473) */
+  --bulma-primary-h: 37deg;
+  --bulma-primary-s: 24%;
+  --bulma-primary-l: 55%;
+
+  /* Dark color: Deep Slate Gray (#1e293b) */
+  --bulma-dark-h: 217deg;
+  --bulma-dark-s: 33%;
+  --bulma-dark-l: 17%;
+  
+  /* Text color (softer than black) */
+  --bulma-text-h: 217deg;
+  --bulma-text-s: 33%;
+  --bulma-text-l: 25%;
+  --bulma-text-strong-l: 15%;
+
+  /* Scheme Main (Background color): Warm Off-White */
+  --bulma-scheme-main-h: 60deg;
+  --bulma-scheme-main-s: 9%;
+  --bulma-scheme-main-l: 98%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: hsl(var(--bulma-scheme-main-h), var(--bulma-scheme-main-s), var(--bulma-scheme-main-l));
 }
 
 .bordered {
