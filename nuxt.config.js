@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - VH Gesso',
+    titleTemplate: 'VH Gesso - %s',
     title: 'Forros, Divisórias e Decorações',
     htmlAttrs: {
       lang: 'pt-BR',
@@ -10,7 +10,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'VH Gesso - Trabalhando com excelência em forros, molduras, divisórias e gesso acartonado em Sorocaba.' },
+      { hid: 'description', name: 'description', content: 'VH Gesso - Trabalhando com excelência em forros, molduras, divisórias e gesso acartonado em Maringa.' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [

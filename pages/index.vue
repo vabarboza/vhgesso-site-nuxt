@@ -70,6 +70,38 @@
         </div>
       </div>
     </section>
+
+    <!-- Depoimentos Section -->
+    <section class="section has-background-white">
+      <div class="container">
+        <div class="has-text-centered mb-6">
+          <h2 class="title is-3 has-text-weight-bold has-text-dark">O que nossos clientes dizem</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="columns is-multiline is-centered">
+          <div class="column is-4" v-for="(depoimento, index) in depoimentos" :key="'dep-'+index">
+            <div class="card testimonial-card is-flex is-flex-direction-column p-5">
+              <div class="mb-4 has-text-primary">
+                <i class="fas fa-star" v-for="n in 5" :key="'star-'+n"></i>
+              </div>
+              <p class="is-italic mb-4 has-text-grey" style="flex-grow: 1;">
+                "{{ depoimento.texto }}"
+              </p>
+              <div class="is-flex is-align-items-center mt-auto pt-4" style="border-top: 1px solid #f1f1f1;">
+                <figure class="image is-48x48 mr-3">
+                  <img class="is-rounded" :src="depoimento.foto" :alt="depoimento.nome">
+                </figure>
+                <div>
+                  <h4 class="title is-6 mb-0">{{ depoimento.nome }}</h4>
+                  <p class="is-size-7 has-text-grey">{{ depoimento.local }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -140,6 +172,26 @@ export default {
           imagem: require('~/assets/images/inicio/06.jpg'),
           link: '/produtos/gesso-decorado'
         }
+      ],
+      depoimentos: [
+        {
+          nome: 'Carlos Mendes',
+          local: 'Sorocaba - SP',
+          texto: 'Trabalho impecável e atendimento de primeira. Fizeram todo o rebaixamento de gesso da minha sala e o resultado superou as expectativas. Altamente recomendável!',
+          foto: 'https://ui-avatars.com/api/?name=Carlos+Mendes&background=a89473&color=fff'
+        },
+        {
+          nome: 'Mariana Silva',
+          local: 'Votorantim - SP',
+          texto: 'Super recomendo! Precisávamos de uma divisória de drywall rápida e a equipe da VH Gesso nos atendeu com muita agilidade, profissionalismo e limpeza no local da obra.',
+          foto: 'https://ui-avatars.com/api/?name=Mariana+Silva&background=1e293b&color=fff'
+        },
+        {
+          nome: 'Roberto Antunes',
+          local: 'Sorocaba - SP',
+          texto: 'A sanca instalada no meu quarto ficou lindíssima. Profissionais pontuais, e o preço cobrado foi bastante justo pela extrema qualidade entregue.',
+          foto: 'https://ui-avatars.com/api/?name=Roberto+Antunes&background=a89473&color=fff'
+        }
       ]
     }
   }
@@ -196,5 +248,13 @@ export default {
 
 .product-card:hover .operates-link {
   padding-left: 6px;
+}
+
+.testimonial-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  background-color: #fafaf9;
+  border: 1px solid rgba(0,0,0,0.02);
+  height: 100%;
 }
 </style>

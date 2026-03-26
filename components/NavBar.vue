@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <NuxtLink class="navbar-item" to="/sobre">
+        <NuxtLink class="navbar-item" to="/contato">
           Contato
         </NuxtLink>
 

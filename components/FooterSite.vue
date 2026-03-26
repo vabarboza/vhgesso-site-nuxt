@@ -32,15 +32,15 @@
           <ul class="footer-contact">
             <li class="mb-3 is-flex is-align-items-center">
               <span class="icon has-text-primary mr-3"><i class="fab fa-whatsapp is-size-5"></i></span>
-              <a href="#" class="has-text-grey-light">(15) 99999-9999</a>
+              <a href="#" class="has-text-grey-light">(44) 99999-9999</a>
             </li>
             <li class="mb-3 is-flex is-align-items-center">
               <span class="icon has-text-primary mr-3"><i class="fas fa-envelope is-size-5"></i></span>
-              <a href="mailto:contato@vhgesso.com.br" class="has-text-grey-light">contato@vhgesso.com.br</a>
+              <a href="mailto:[EMAIL_ADDRESS]" class="has-text-grey-light">[EMAIL_ADDRESS]</a>
             </li>
             <li class="mb-3 is-flex is-align-items-start">
               <span class="icon has-text-primary mr-3 mt-1"><i class="fas fa-map-marker-alt is-size-5"></i></span>
-              <span class="has-text-grey-light">Sorocaba - SP<br>Atendimento presencial sujeito a agendamento.</span>
+              <span class="has-text-grey-light">Maringa - PR<br>Atendimento presencial sujeito a agendamento.</span>
             </li>
           </ul>
         </div>
