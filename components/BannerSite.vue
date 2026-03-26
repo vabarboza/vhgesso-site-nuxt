@@ -7,7 +7,7 @@
                     <img class="title responsive-image animate__animated animate__fadeInDown" src="~/assets/images/logo.png" alt="VH Gesso Logo" />
                     
                     <h2 class="subtitle has-text-white is-4 has-text-weight-light mt-5 animate__animated animate__fadeInUp animate__delay-1s" style="line-height: 1.6; max-width: 800px; margin: 0 auto;">
-                        Excelência em <strong>Forros</strong>, <strong>Molduras</strong> e <strong>Gesso Acartonado</strong>. <br class="is-hidden-mobile">
+                        Excelência em <strong style="color: var(--bulma-primary);">Forros</strong>, <strong style="color: var(--bulma-primary);">Molduras</strong> e <strong style="color: var(--bulma-primary);">Gesso Acartonado</strong>. <br class="is-hidden-mobile">
                         Soluções completas para Divisórias, Sancas, Colunas e Arte em Gesso.
                     </h2>
                     
